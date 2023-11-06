@@ -39,7 +39,7 @@ namespace iphonemod
 
         void OnGameInitialized(object sender, EventArgs e)
         {
-            var bundle = LoadAssetBundle("iphonemod.assts.iphone12pm");
+            var bundle = LoadAssetBundle("iphonemod.assets.iphone12pm");
             phone = Instantiate(bundle.LoadAsset<GameObject>("iPhone12ProMax"));
             phone.transform.SetParent(GorillaTagger.Instance.offlineVRRig.rightHandTransform, true);
             Debug.Log("Asset Bundle should be loaded and parented");
