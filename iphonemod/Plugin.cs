@@ -12,6 +12,7 @@ namespace iphonemod
     [BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
     public class Plugin : BaseUnityPlugin
     {
+        
         bool inRoom;
         public GameObject phone;
         public AssetBundle LoadAssetBundle(string path)
