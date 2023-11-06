@@ -52,10 +52,11 @@ namespace iphonemod
             phone.transform.SetParent(GorillaTagger.Instance.offlineVRRig.rightHandTransform, true);
             Debug.Log("Asset Bundle should be loaded and parented");
         }
-
+        public Vector3 RHTP = GorillaTagger.Instance.offlineVRRig.rightHandTransform.position;
         void FixedUpdate()
         {
-            phone.transform.position = GorillaTagger.Instance.offlineVRRig.rightHandTransform.position;
+            Vector3 phoneposition = RHTP + new Vector3(0, (float)-0.2, (float)0.2);
+            phone.transform.position = phoneposition;
         }
 
         [ModdedGamemodeJoin]
